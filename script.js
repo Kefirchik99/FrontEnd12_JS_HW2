@@ -67,7 +67,13 @@ console.log();
 
 const strings = ['Star', 'Planet', 'Comet', 'Interstellar', 'Space'];
 
-
+let longestString = "";
+for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length > longestString.length) {
+        longestString = strings[i];
+    }
+}
+console.log(longestString);
 
 // напишите программу которая возьмёт из данного массива наисенования книг которые вышли в этом году
 // и добавит их в новый массив
