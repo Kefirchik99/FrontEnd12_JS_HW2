@@ -48,13 +48,20 @@ const people = [
     }
 ]
 const names = [];
-const names18Plus = people.map(ages => {
+const names18Plus = people.forEach(ages => {
     if (ages.age >= 18) {
         names.push(ages.name);
     }
 }
 )
+
+// ! const names = people
+// !    .filter(person => person.age >= 18)
+// !     .map(person => person.name);
 console.log(names);
+console.log();
+
+
 
 // напишите программу которая проанализирует данный массив и выведет в консоль самую длинную строку
 
