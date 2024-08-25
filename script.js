@@ -16,8 +16,8 @@ divByTwo.forEach(numm => {
 }
 )
 
-console.log(summ);
-console.log();
+console.log(summ + "\n");
+
 // Напишите программу которая проанализирует данный массив с объектами
 // и добавит в новый массив только имена тех людей кому 18 и старше
 
@@ -58,8 +58,8 @@ const names18Plus = people.forEach(ages => {
 // ! const names = people
 // !    .filter(person => person.age >= 18)
 // !     .map(person => person.name);
-console.log(names);
-console.log();
+console.log(names + "\n");
+
 
 
 
@@ -73,7 +73,7 @@ for (let i = 0; i < strings.length; i++) {
         longestString = strings[i];
     }
 }
-console.log(longestString);
+console.log(longestString + "\n");
 
 // напишите программу которая возьмёт из данного массива наисенования книг которые вышли в этом году
 // и добавит их в новый массив
@@ -106,11 +106,24 @@ const books = [
     }
 ];
 
+const lastYear = [];
+const theBooks = books.forEach(years => {
+    if(years.release === 2023) {
+        lastYear.push(years.title)
+    }
+})
+console.log(lastYear + "\n");
 
 // Напишите программу которая проанализирует данный массив и найдёт в нем наибольшее число кратное трём
 
 const numbers = [3, 15, 23, 56, 66, 71, 12, 90];
 
+const divByThree = numbers.filter(numBy3 => {
+    if(numBy3 % 3 === 0) {
+        return numBy3;
+    }
+})
+console.log(divByThree + "\n");
 
 // напишите программу которая найдёт самого старшего человека в данном массиве с объектами
 // и сохранит его в переменную oldestPerson
@@ -140,3 +153,15 @@ const people2 = [
         age: 17
     }
 ];
+
+let oldestNumber = 0;
+let oldestPerson = "";
+
+
+for (let i = 0; i < people2.length; i++) {
+    if (people2[i].age > oldestNumber) {
+        oldestNumber = people2[i].age;
+        oldestPerson = people2[i].name;
+    }
+}
+console.log(oldestPerson);
