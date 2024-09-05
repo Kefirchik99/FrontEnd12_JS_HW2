@@ -118,12 +118,20 @@ console.log(lastYear + "\n");
 
 const numbers = [3, 15, 23, 56, 66, 71, 12, 90];
 
-const divByThree = numbers.filter(numBy3 => {
-    if(numBy3 % 3 === 0) {
-        return numBy3;
-    }
+const largest = 0;
+numbers.forEach(num => {
+if (num % 3 === 0 && num > largest){
+largest = num;
+}
 })
-console.log(divByThree + "\n");
+
+
+// const divByThree = numbers.filter(numBy3 => {
+//    if(numBy3 % 3 === 0) {
+//        return numBy3;
+//    }
+// })
+//console.log(divByThree + "\n");
 
 // напишите программу которая найдёт самого старшего человека в данном массиве с объектами
 // и сохранит его в переменную oldestPerson
